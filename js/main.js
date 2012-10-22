@@ -190,12 +190,12 @@ function createCustomLink() {
         heading : 63
       },
       {
-        description : "Sala",
+        description : "Lots & Lots of work",
         pano : "floor-1_room-4",
         heading : 345
       },
       {
-        description : "Saída",
+        description : "Primeiro Andar",
         pano : "floor-0_room-1",
         heading : 220
       });
