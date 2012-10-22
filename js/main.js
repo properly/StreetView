@@ -78,6 +78,7 @@ function getCustomPanorama(panoID) {
         pano: 'floor-0_room-2',
         latLng: new google.maps.LatLng(-23.559568,-46.668402)
       };
+      streetViewPanoramaData["tiles"].centerHeading = 180;
       return streetViewPanoramaData;
     case "floor-0_room-3":
       streetViewPanoramaData["location"] = {
@@ -85,14 +86,13 @@ function getCustomPanorama(panoID) {
         latLng: new google.maps.LatLng(-23.559568,-46.668402),
         description: "Cozinha"
       };
-      streetViewPanoramaData["tiles"].centerHeading = 360;
+      streetViewPanoramaData["tiles"].centerHeading = 180;
       return streetViewPanoramaData;
     case "floor-0_room-4":
       streetViewPanoramaData["location"] = {
         pano: 'floor-0_room-4',
         latLng: new google.maps.LatLng(-23.559568,-46.668402)
       };
-      streetViewPanoramaData["tiles"].centerHeading = 180;
       return streetViewPanoramaData;
     case "floor-1_room-1":
       streetViewPanoramaData["location"] = {
@@ -227,7 +227,7 @@ function createCustomLink() {
         heading : 150
       },
       {
-        description : "Teraço",
+        description : "Terraço",
         pano : "floor-1_room-5",
         heading : 305
       },
@@ -272,17 +272,17 @@ function createCustomLink() {
       links.push({
         description: "Cozinha",
         pano : "floor-0_room-3",
-        heading : 200
+        heading : 20
       },
       {
         description: "Sala",
         pano : "floor-0_room-4",
-        heading : 300
+        heading : 120
       },
       {
         description: "Hall",
         pano : "floor-0_room-1",
-        heading : 20
+        heading : 200
       });
       break;
 
@@ -291,7 +291,7 @@ function createCustomLink() {
       links.push({
         description: "Corredor",
         pano : "floor-0_room-2",
-        heading : 20
+        heading : 200
       });
       break;
 
@@ -300,7 +300,7 @@ function createCustomLink() {
       links.push({
         description: "Corredor",
         pano : "floor-0_room-2",
-        heading : 20
+        heading : 200
       });
       break;
   }
