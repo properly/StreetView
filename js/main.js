@@ -65,6 +65,30 @@ function getCustomPanorama(panoID) {
         latLng: new google.maps.LatLng(-23.559568,-46.668402)
       };
       return streetViewPanoramaData;
+    case "floor-0_room-1":
+      streetViewPanoramaData["location"] = {
+        pano: 'floor-0_room-1',
+        latLng: new google.maps.LatLng(-23.559568,-46.668402)
+      };
+      return streetViewPanoramaData;
+    case "floor-0_room-2":
+      streetViewPanoramaData["location"] = {
+        pano: 'floor-0_room-2',
+        latLng: new google.maps.LatLng(-23.559568,-46.668402)
+      };
+      return streetViewPanoramaData;
+    case "floor-0_room-3":
+      streetViewPanoramaData["location"] = {
+        pano: 'floor-0_room-3',
+        latLng: new google.maps.LatLng(-23.559568,-46.668402)
+      };
+      return streetViewPanoramaData;
+    case "floor-0_room-4":
+      streetViewPanoramaData["location"] = {
+        pano: 'floor-0_room-4',
+        latLng: new google.maps.LatLng(-23.559568,-46.668402)
+      };
+      return streetViewPanoramaData;
     case "floor-1_room-1":
       streetViewPanoramaData["location"] = {
         pano: 'floor-1_room-1',
@@ -75,7 +99,6 @@ function getCustomPanorama(panoID) {
     case "floor-1_room-3":
       streetViewPanoramaData["location"] = {
         pano: 'floor-1_room-3',
-        description: "Primeiro andar",
         latLng: new google.maps.LatLng(-23.559568,-46.668402)
       };
       return streetViewPanoramaData;
@@ -90,6 +113,7 @@ function getCustomPanorama(panoID) {
       streetViewPanoramaData["location"] = {
         pano: 'floor-1_room-5',
         description: "Terraço",
+        pano: 'floor-0_room-4',
         latLng: new google.maps.LatLng(-23.559568,-46.668402)
       };
       return streetViewPanoramaData;
@@ -121,12 +145,12 @@ function createCustomLink() {
       });
       break;
 
-    //Inside
+    //Inside the villa
     case "exterior-1":
       links.push({
         description : "Remix Social Ideas",
         pano : "exterior-2",
-        heading : 20
+        heading : 350
       },
       {
         description : "segundo andar",
@@ -148,7 +172,7 @@ function createCustomLink() {
         heading : 20
       },
       {
-        description : "Saída",
+        description : "Alameda Tietê",
         pano : "exterior-1",
         heading : 300
       });
@@ -216,6 +240,64 @@ function createCustomLink() {
         description : "Lots & Lots of work",
         pano : "floor-1_room-1",
         heading : 0
+      });
+      break;
+
+
+
+    // First floor corridor
+    case "floor-0_room-1":
+      links.push({
+        description: "Corredor",
+        pano : "floor-0_room-2",
+        heading : 70
+      },
+      {
+        description : "Andar superior",
+        pano : "floor-1_room-1",
+        heading : 330
+      },
+      {
+        description : "Saída",
+        pano : "exterior-2",
+        heading : 200
+      });
+      break;
+
+    // First floor corridor - 2nd stop
+    case "floor-0_room-2":
+      links.push({
+        description: "Cozinha",
+        pano : "floor-0_room-3",
+        heading : 200
+      },
+      {
+        description: "Sala",
+        pano : "floor-0_room-4",
+        heading : 300
+      },
+      {
+        description: "Hall",
+        pano : "floor-0_room-1",
+        heading : 20
+      });
+      break;
+
+    // Sala
+    case "floor-0_room-4":
+      links.push({
+        description: "Corredor",
+        pano : "floor-0_room-2",
+        heading : 200
+      });
+      break;
+
+    // Cozinha
+    case "floor-0_room-3":
+      links.push({
+        description: "Corredor",
+        pano : "floor-0_room-2",
+        heading : 20
       });
       break;
   }
