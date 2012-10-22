@@ -58,6 +58,7 @@ function getCustomPanorama(panoID) {
         pano: "exterior-1",
         latLng: new google.maps.LatLng(-23.559568,-46.668402),
       };
+      streetViewPanoramaData["tiles"].centerHeading = 20;
       return streetViewPanoramaData;
     case "exterior-2":
       streetViewPanoramaData["location"] = {
@@ -70,6 +71,7 @@ function getCustomPanorama(panoID) {
         pano: 'floor-0_room-1',
         latLng: new google.maps.LatLng(-23.559568,-46.668402)
       };
+      streetViewPanoramaData["tiles"].centerHeading = 320;
       return streetViewPanoramaData;
     case "floor-0_room-2":
       streetViewPanoramaData["location"] = {
@@ -80,14 +82,17 @@ function getCustomPanorama(panoID) {
     case "floor-0_room-3":
       streetViewPanoramaData["location"] = {
         pano: 'floor-0_room-3',
-        latLng: new google.maps.LatLng(-23.559568,-46.668402)
+        latLng: new google.maps.LatLng(-23.559568,-46.668402),
+        description: "Cozinha"
       };
+      streetViewPanoramaData["tiles"].centerHeading = 360;
       return streetViewPanoramaData;
     case "floor-0_room-4":
       streetViewPanoramaData["location"] = {
         pano: 'floor-0_room-4',
         latLng: new google.maps.LatLng(-23.559568,-46.668402)
       };
+      streetViewPanoramaData["tiles"].centerHeading = 180;
       return streetViewPanoramaData;
     case "floor-1_room-1":
       streetViewPanoramaData["location"] = {
@@ -151,11 +156,6 @@ function createCustomLink() {
         description : "Remix Social Ideas",
         pano : "exterior-2",
         heading : 350
-      },
-      {
-        description : "segundo andar",
-        pano : "floor-1_room-1",
-        heading : 323
       },
       {
         description : "Alameda Tietê",
@@ -244,18 +244,17 @@ function createCustomLink() {
       break;
 
 
-
     // First floor corridor
     case "floor-0_room-1":
       links.push({
         description: "Corredor",
         pano : "floor-0_room-2",
-        heading : 70
+        heading : 10
       },
       {
-        description : "Andar superior",
+        description : "Segundo andar",
         pano : "floor-1_room-1",
-        heading : 330
+        heading : 280
       },
       {
         description : "Saída",
@@ -288,7 +287,7 @@ function createCustomLink() {
       links.push({
         description: "Corredor",
         pano : "floor-0_room-2",
-        heading : 200
+        heading : 20
       });
       break;
 
