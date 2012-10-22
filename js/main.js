@@ -56,7 +56,7 @@ function getCustomPanorama(panoID) {
     case "exterior-1":
       streetViewPanoramaData["location"] = {
         pano: "exterior-1",
-        latLng: new google.maps.LatLng(-23.559568,-46.668402)
+        latLng: new google.maps.LatLng(-23.559568,-46.668402),
       };
       return streetViewPanoramaData;
     case "exterior-2":
