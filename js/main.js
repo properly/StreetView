@@ -242,7 +242,7 @@ function createCustomLink() {
     case "floor-1_room-5":
       links.push({
         description : "Lots & Lots of work",
-        pano : "floor-1_room-1",
+        pano : "floor-1_room-4",
         heading : 243
       });
       break;
