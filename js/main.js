@@ -71,12 +71,6 @@ function getCustomPanorama(panoID) {
         latLng: new google.maps.LatLng(-23.559568,-46.668402)
       };
       return streetViewPanoramaData;
-    case "floor-0_room-4":
-      streetViewPanoramaData["location"] = {
-        pano: 'floor-0_room-4',
-        latLng: new google.maps.LatLng(-23.559568,-46.668402)
-      };
-      return streetViewPanoramaData;
     case "floor-0_room-2":
       streetViewPanoramaData["location"] = {
         pano: 'floor-0_room-2',
@@ -85,8 +79,48 @@ function getCustomPanorama(panoID) {
       return streetViewPanoramaData;
     case "floor-0_room-3":
       streetViewPanoramaData["location"] = {
-        description: "Cozinha",
         pano: 'floor-0_room-3',
+        latLng: new google.maps.LatLng(-23.559568,-46.668402)
+      };
+      return streetViewPanoramaData;
+    case "floor-0_room-4":
+      streetViewPanoramaData["location"] = {
+        pano: 'floor-0_room-4',
+        latLng: new google.maps.LatLng(-23.559568,-46.668402)
+      };
+      return streetViewPanoramaData;
+    case "floor-1_room-1":
+      streetViewPanoramaData["location"] = {
+        pano: 'floor-1_room-1',
+        description: "Segundo andar",
+        latLng: new google.maps.LatLng(-23.559568,-46.668402)
+      };
+      return streetViewPanoramaData;
+    case "floor-1_room-3":
+      streetViewPanoramaData["location"] = {
+        pano: 'floor-1_room-3',
+        latLng: new google.maps.LatLng(-23.559568,-46.668402)
+      };
+      return streetViewPanoramaData;
+    case "floor-1_room-4":
+      streetViewPanoramaData["location"] = {
+        pano: 'floor-1_room-4',
+        description: "Lots & Lots of work",
+        latLng: new google.maps.LatLng(-23.559568,-46.668402)
+      };
+      return streetViewPanoramaData;
+    case "floor-1_room-5":
+      streetViewPanoramaData["location"] = {
+        pano: 'floor-1_room-5',
+        description: "Terraço",
+        pano: 'floor-0_room-4',
+        latLng: new google.maps.LatLng(-23.559568,-46.668402)
+      };
+      return streetViewPanoramaData;
+    case "floor-1_room-6":
+      streetViewPanoramaData["location"] = {
+        pano: 'floor-1_room-6',
+        description: "Banheiro",
         latLng: new google.maps.LatLng(-23.559568,-46.668402)
       };
       return streetViewPanoramaData;
@@ -119,6 +153,11 @@ function createCustomLink() {
         heading : 350
       },
       {
+        description : "segundo andar",
+        pano : "floor-1_room-1",
+        heading : 323
+      },
+      {
         description : "Alameda Tietê",
         pano : initPosPanoID,
         heading : 203
@@ -138,6 +177,73 @@ function createCustomLink() {
         heading : 300
       });
       break;
+
+      // Upstairs
+    case "floor-1_room-1":
+      links.push({
+        description : "Sala de Reunião",
+        pano : "floor-1_room-3",
+        heading : 123
+      },
+      {
+        description : "Sala",
+        pano : "floor-1_room-4",
+        heading : 45
+      },
+      {
+        description : "Saída",
+        pano : "floor-0_room-1",
+        heading : 280
+      });
+      break;
+
+      // Meeting room
+    case "floor-1_room-3":
+      links.push({
+        description : "Segundo andar",
+        pano : "floor-1_room-1",
+        heading : 115
+      });
+      break;
+
+      // bathroom
+    case "floor-1_room-6":
+      links.push({
+        description : "Lots & Lots of work",
+        pano : "floor-1_room-1",
+        heading : 160
+      });
+      break;
+
+      // Lots & Lots of work
+    case "floor-1_room-4":
+      links.push({
+        description : "Segundo Andar",
+        pano : "floor-1_room-1",
+        heading : 50
+      },
+      {
+        description : "Teraço",
+        pano : "floor-1_room-5",
+        heading : 205
+      },
+      {
+        description : "Banheiro",
+        pano : "floor-1_room-6",
+        heading : 110
+      });
+      break;
+
+      // Terrace
+    case "floor-1_room-5":
+      links.push({
+        description : "Lots & Lots of work",
+        pano : "floor-1_room-1",
+        heading : 0
+      });
+      break;
+
+
 
     // First floor corridor
     case "floor-0_room-1":
